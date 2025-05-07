@@ -2,6 +2,7 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 import Axios from "axios";
 import { createHash } from "crypto";
+import { models } from "../lib/models.js";
 
 const handler = async (request: VercelRequest, response: VercelResponse) => {
 	response.setHeader("Access-Control-Allow-Origin", "*");
@@ -26,7 +27,8 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
 		case "/models":
 			if (!headers.authorization || createHash("sha256").update(headers.authorization).digest("base64") != process.env.COPILOT_KEY_HASH) {
 				console.log("Invalid Credentials");
-				return response.status(401).send("Invalid Credentials");
+
+				return response.status(200).send(models);
 			};
 
 			base = "https://api.openai.com/v1";
