@@ -13,7 +13,7 @@ A very simple proxy and transformer that allows for using cursor's openai models
 1. Go to [Github Tokens](https://github.com/settings/tokens)
 2. Create a Github Classic Token with copilot permission and **SAVE THIS TOKEN**
 3. Open Cursor Settings and go to models page
-4. Set Overide OpenAI Base URL to https://johnlozier.com/copilotForward
+4. Set Overide OpenAI Base URL to https://copilotforward.johnlozier.com
 5. Set OpenAI key to the Github Token
 
 ## Note
