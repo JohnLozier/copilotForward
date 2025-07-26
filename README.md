@@ -6,7 +6,14 @@ A very simple proxy and transformer that allows for using cursor's openai models
 
 - Student with Student Developer Pack (should allow for free usage of all models)
 - Existing Github Pro or copilot subscription
-- Basic free usage of models such as gpt-o4 inside cursor
+- Basic free usage of models such as gpt-4.1 and gpt-4o inside cursor
+
+### ⚠️ IMPORTANT ⚠️
+
+Cursor currently only support non reasoning models when using openai api keys. Hopefully they will change this in the future as this is supported through the api
+See [here](https://docs.cursor.com/settings/api-keys#will-my-api-key-be-stored-or-leave-my-device) for more information.
+
+Currently you can only use modles like gpt-4.1 and gpt-4o inside cursor. Github models also supports other models such as deepseek and grok, but cursor doesn't allow setting custom base urls for providers other than openai.
 
 ## Usage
 
@@ -21,7 +28,7 @@ A very simple proxy and transformer that allows for using cursor's openai models
 Recommended to clone repo and host yourself, because github doesn't host an /models endpoint. 
 I am manually sending models response for models endpoint, but this is unlikely to stay up to date.
 
-Feel free to submit a pull request to update this list and I will accept it
+Feel free to submit a pull request to update this list and I will accept it.
 
 ### Host yourself
 
